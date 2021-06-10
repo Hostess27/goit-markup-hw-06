@@ -203,6 +203,7 @@ svg {
 }
 
 .footer {
+    position: relative;
     background-color: var(--secondary-background-color);
     padding-top: 60px;
     padding-bottom: 60px;
@@ -243,13 +244,13 @@ svg {
     font-style: normal;
 }
 .adds {
+    display: inline-block;
     font-size: 14px;
     line-height: 1.71;
 
     margin-right: 70px;
 
     color: var(--white);
-    display: inline-block;
     margin-top: 0;
     margin-bottom: 9px;
 }
@@ -316,6 +317,56 @@ svg {
 
 .social-icon {
     fill: var(--white);
+}
+
+.input {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+
+    flex-direction: column;
+}
+
+.input-tittle {
+    display: block;
+    text-align: center;
+
+    width: 219px;
+    height: 16px;
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    line-height: 1.14px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.input-mail {
+    display: inline-block;
+    width: 358px;
+    height: 50px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+}
+
+.input-button {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+
+    background: var(--accent-color);
+    color: var(--white);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 }
 
 /* index.html */
@@ -734,8 +785,6 @@ svg {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-
-    
 }
 
 .modal-button {
@@ -747,8 +796,6 @@ svg {
     border-radius: 50%;
     margin-top: 8px;
     margin-right: 8px;
-
-   
 }
 
 .modal-icons {
