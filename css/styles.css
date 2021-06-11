@@ -240,15 +240,19 @@ svg {
     letter-spacing: 0.02em;
 }
 
+.adds {
+    margin-right: 70px;
+}
+
 .adds-like {
     font-style: normal;
 }
-.adds {
+.adds-tittle {
     display: inline-block;
     font-size: 14px;
     line-height: 1.71;
 
-    margin-right: 70px;
+    white-space: nowrap;
 
     color: var(--white);
     margin-top: 0;
@@ -270,6 +274,11 @@ svg {
 .flex-footer {
     display: flex;
     align-items: baseline;
+    justify-content: space-between;
+}
+
+.plea {
+    margin-right: 93px;
 }
 
 .plea-title {
@@ -319,17 +328,10 @@ svg {
     fill: var(--white);
 }
 
-.input {
-    position: absolute;
-    left: 50%;
-    bottom: 50%;
-
-    flex-direction: column;
-}
-
 .input-tittle {
     display: block;
     text-align: center;
+    justify-content: center;
 
     width: 219px;
     height: 16px;
@@ -339,13 +341,22 @@ svg {
     line-height: 1.14px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    color: var(--white);
 }
 
+.input-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .input-mail {
     display: inline-block;
     width: 358px;
     height: 50px;
+    margin-right: 12px;
 
+    background-color: var(--secondary-background-color);
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -355,18 +366,24 @@ svg {
 .input-button {
     display: flex;
     align-items: center;
-    text-align: center;
+    justify-content: center;
     width: 200px;
     height: 50px;
 
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.06em;
+    margin-right: 10px;
 
     background: var(--accent-color);
     color: var(--white);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+}
+
+.send-icon {
+    margin-left: 10px;
+    fill: var(--white);
 }
 
 /* index.html */
@@ -773,13 +790,15 @@ svg {
 .modal {
     position: absolute;
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
     min-width: 528px;
     min-height: 581px;
+    padding: 40px 39px 40px 41px;
 
     background: var(--white);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -787,9 +806,27 @@ svg {
     border-radius: 4px;
 }
 
+.modal-title {
+    width: 448px;
+    height: 23px;
+
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: var(--title-text-color);
+}
+
 .modal-button {
+    position: absolute;
+    left: 0;
+    right: 0;
+
     width: 30px;
     height: 30px;
+
+    transform: translateX(100%);
 
     background-color: var(--white);
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -800,4 +837,59 @@ svg {
 
 .modal-icons {
     fill: var(--title-text-color);
+}
+
+.modal-button:hover .modal-icons,
+.modal-button:focus .modal-icons {
+    fill: var(--accent-color);
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    /* padding: 40px; */
+}
+.form-list:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.form-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-fild{
+
+}
+
+.form-fild input{
+    margin-bottom: 4px;
+}
+
+.modal-icons{ 
+
+}
+
+.documents {
+    width: 400px;
+    height: 24px;
+
+    font-size: 14px;
+    line-height: 1.71px;
+
+    letter-spacing: 0.03em;
+}
+.documents-link {
+    border-bottom: solid 1px var(--accent-color);
+    color: var(--accent-color);
+}
+
+.modal-submit {
+    width: 200px;
+    height: 50px;
+
+    color: var(--white);
+    background: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 }
