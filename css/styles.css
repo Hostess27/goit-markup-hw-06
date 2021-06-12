@@ -797,8 +797,8 @@ svg {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    min-width: 528px;
-    min-height: 581px;
+    width: 100%;
+    max-width: 528px;
     padding: 40px 39px 40px 41px;
 
     background: var(--white);
@@ -810,6 +810,7 @@ svg {
 .modal-title {
     width: 448px;
     height: 23px;
+    margin-bottom: 12px;
 
     font-size: 20px;
     line-height: 23px;
@@ -832,13 +833,13 @@ svg {
     border-radius: 50%;
 }
 
-.modal-icons {
+.modal-icons-close {
     fill: var(--title-text-color);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-button:hover .modal-icons,
-.modal-button:focus .modal-icons {
+.modal-button:hover .modal-icons-close,
+.modal-button:focus .modal-icons-close {
     fill: var(--accent-color);
 }
 
@@ -860,13 +861,19 @@ svg {
 }
 
 .form-fild {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+
+    color: var(--primary-text-color);
 }
 
 .form-kind {
-    width: 448px;
     height: 40px;
     padding-left: 42px;
 
+    cursor: pointer;
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
@@ -876,34 +883,33 @@ svg {
 
 .form-kind:hover,
 .form-kind:focus,
-.form-kind:active{
+.form-kind:active {
     outline: var(--accent-color);
     border-color: var(--accent-color);
+}
+.form-kind:hover + .modal-icons,
+.form-kind:focus + .modal-icons,
+.form-kind:active + .modal-icons {
     fill: var(--accent-color);
 }
 
-.form-person {
+
+
+.modal-icons {
     position: absolute;
     display: inline-block;
     top: 50%;
     left: 10px;
-}
 
-.form-list label {
-    margin-bottom: 4px;
-}
-
-.modal-icons {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .documents {
-    width: 400px;
-    height: 24px;
-
     font-size: 14px;
     line-height: 1.71px;
 
     letter-spacing: 0.03em;
+    cursor: pointer;
 }
 .documents-link {
     border-bottom: solid 1px var(--accent-color);
@@ -914,7 +920,8 @@ svg {
     width: 448px;
     height: 120px;
     resize: none;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    padding: 12px 16px;
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
@@ -939,20 +946,22 @@ svg {
 .checkbox-label {
     display: flex;
     align-items: center;
-}
+    justify-content: center;
 
-.checkbox-like {
-    /* display: flex;
-    align-items: center; */
+    margin-bottom: 30px;
 }
 
 .check-icon {
-    display: inline-block;
-    width: 16px;
-    height: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 17px;
+    height: 17px;
 
     border: 1px solid var(--dark-gray-100);
     border-radius: 2px;
+    cursor: pointer;
 }
 
 .modal-checkbox:checked + .check-icon {
@@ -961,10 +970,8 @@ svg {
 }
 
 .icon-tick {
-    display: inline-block;
-
-    width: 16px;
-    height: 15px;
+    width: 100%;
+    height: 100%;
 
     fill: var(--white);
 }
